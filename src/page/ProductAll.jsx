@@ -11,8 +11,8 @@ const ProductAll = () => {
 		let searchQuery = query.get('q') || "";
 		console.log('searchQuery', searchQuery);
 		let url = searchQuery
-  ? `http://localhost:5000/products?title:contains=${searchQuery}`
-  : 'http://localhost:5000/products';
+  ? `https://my-json-server.typicode.com/ygee-88/react-hnm/products?title:contains=${searchQuery}`
+  : 'https://my-json-server.typicode.com/ygee-88/react-hnm/products';
 		let response = await fetch(url);
 		let data = await response.json();
 		setProductList(data);
